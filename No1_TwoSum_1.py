@@ -6,13 +6,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        for x in xrange(0, len(nums) - 1):
-            for y in xrange(x + 1, len(nums)):
+        for x in range(0, len(nums) - 1):
+            for y in range(x + 1, len(nums)):
                 if nums[x] + nums[y] == target:
                     return([x, y])
 
     def readNums(self):
-        st = raw_input()
+        st = input()
         nums = []
         for s in st:
             try:
@@ -23,10 +23,10 @@ class Solution(object):
         return(nums)
 
     def readTarget(self):
-        return(int(raw_input()))
+        return(int(input()))
 
 if __name__ == '__main__':
     sol = Solution()
     nums = sol.readNums()
     target = sol.readTarget()
-    print sol.twoSum(nums, target)
+    print(sol.twoSum(nums, target))

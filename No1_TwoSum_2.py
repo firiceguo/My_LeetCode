@@ -1,5 +1,6 @@
 class Solution(object):
-    # O(n) Version from others
+    # O(n) Version
+
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution(object):
                 tmp[nums[i]] = i
 
     def readNums(self):
-        st = raw_input()
+        st = input()
         nums = []
         for s in st:
             try:
@@ -25,10 +26,10 @@ class Solution(object):
         return(nums)
 
     def readTarget(self):
-        return(int(raw_input()))
+        return(int(input()))
 
 if __name__ == '__main__':
     sol = Solution()
     nums = sol.readNums()
     target = sol.readTarget()
-    print sol.twoSum(nums, target)
+    print(sol.twoSum(nums, target))
